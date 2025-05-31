@@ -45,7 +45,7 @@ The ETL process consists of two main tasks:
      - Uses **SQLAlchemy** as the ORM to load the processed data into the database.
 
 
-####  Scheduler Screenshots 
+####  Scheduler Screenshot
 ![image](https://github.com/shamlikTK/ClinicalDataSearcher/blob/main/data/sc/prefect.png)
 
 
@@ -107,3 +107,5 @@ This system supports both operational workflows and analytical workloads by inte
 
 
 
+#### Note:
+I utilized a LLM to assist in building this project.I independently designed the system architecture and developed the schema.
