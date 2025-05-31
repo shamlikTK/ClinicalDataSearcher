@@ -61,7 +61,6 @@ The ETL process consists of two main tasks:
 - A separate `search_vectors` table is used to support full text search capabilities using data type `tsvector`
 
 
-
 ## Production  design 
 
 The above design is mainly for demonstration purposes. If I were to build a production-ready data platform, I would choose the following pattern:
@@ -75,7 +74,7 @@ The above design is mainly for demonstration purposes. If I were to build a prod
 
 This system supports both operational workflows and analytical workloads by integrating a **PostgreSQL OLTP database** for console operations and a **data warehouse** for business analytics.
 
-#### Data Flow Architecture
+#### Data Flow Architecture and Multi stage 
 
 1. **System of Records**
    - Contains raw files, including EMA and Clinical Trials formats.
@@ -103,8 +102,15 @@ This system supports both operational workflows and analytical workloads by inte
 
 6. **Communication Layer**
    - All system components communicate via a **message bus** (e.g., Kafka), ensuring reliable and scalable data flow.
+   
+7. **Tech stack**
+   - The technical stack included Spark for data transformation, Kafka for message passing, PostgreSQL, Milvus, and Elasticsearch for database search, and Power BI for business intelligence
+   - I would use Hirarchical chinking method of this type data.
+   - DiskANN for Embedded Indexing
 
+![3](https://github.com/shamlikTK/ClinicalDataSearcher/blob/main/data/sc/3.png)
 
+#### 
 
 
 #### Note:
