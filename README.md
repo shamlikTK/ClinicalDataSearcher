@@ -108,10 +108,29 @@ This system supports both operational workflows and analytical workloads by inte
    - I would use Hirarchical chinking method of this type data.
    - DiskANN for Embedded Indexing
 
-![3](https://github.com/shamlikTK/ClinicalDataSearcher/blob/main/data/sc/3.png)
+![tracking3](https://github.com/shamlikTK/ClinicalDataSearcher/blob/main/data/sc/3.png)
 
-#### 
+#### Data updation process:
+The data update process will occur in two steps. The domain-specific model will notify both the OLTP and OLAP layers simultaneously. In the OLTP layer, values will be replaced directly. In the embedding database, only the corresponding chunk will be updated using checksum matching. For the OLAP layer, the domain-specific model will be transformed into a STAR schema. Additionally, three extra columns start_date, end_date, and flag will be added to the dimension tables to maintain historical data.
 
+
+#### Diffent type of input data 
+
+As mentioned in the Production Design section, all data will first be transformed into a system of record using a standardized schema. The same database and ETL process will be used to process and store multiple types of records, with specific columns included to identify the structure of each record.
+
+
+
+#### Fields to be Standardized
+
+Several fields need to be standardized to ensure a consistent format
+
+    - `minimumAge, (age)`: Should be standardized to a consistent unit (e.g., "13 years").
+
+    - `date`: Dates may appear in different formats, such as yyyy-mm-dd or yyyy-mm, and should be normalized accordingly.
+
+    - `phoneNumber`: Values can vary, e.g., "+201159523871" or "414-520-7097"; a standard international format (e.g., E.164) should be enforced.
+
+    - `detailedDescription, briefSummary`: These text fields should be stored in a way that optimizes them for efficient search and retrieval.
 
 #### Note:
 I utilized a LLM to assist in building this project.I independently designed the system architecture and developed the schema.
