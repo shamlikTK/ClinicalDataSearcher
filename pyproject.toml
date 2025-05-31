@@ -1,0 +1,13 @@
+[project]
+name = "clinicaldata3"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dateutils>=0.6.12",
+    "dotenv>=0.9.9",
+    "psycopg2-binary>=2.9.10",
+    "pydantic>=2.11.5",
+    "sqlalchemy>=2.0.41",
+]
