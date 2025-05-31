@@ -2,7 +2,7 @@ This project is aimed to get data from https://clinicaltrials.gov/ and create tr
 
 # Architecture diagram 
 
-![[tracking_system1.png]]
+![image](https://github.com/shamlikTK/ClinicalDataSearcher/blob/main/data/sc/1.png)
 
 
 
