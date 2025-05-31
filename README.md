@@ -1,9 +1,20 @@
 This project is aimed to get data from https://clinicaltrials.gov/ and create transform and load to a PostgreSQL data bases in the *search optimized way* 
 
+
+
+
 # Architecture diagram 
 
 ![image](https://github.com/shamlikTK/ClinicalDataSearcher/blob/main/data/sc/1.png)
 
+
+# How to run 
+
+```
+git clone https://github.com/shamlikTK/ClinicalDataSearcher
+cd ClinicalDataSearcher
+docker compose up -d
+```
 
 
 ### ETL Process
@@ -32,12 +43,13 @@ The ETL process consists of two main tasks:
 
   3. **Load Data**  
      - Uses **SQLAlchemy** as the ORM to load the processed data into the database.
- 
+
+
+####  Scheduler Screenshots 
+![image](https://github.com/shamlikTK/ClinicalDataSearcher/blob/main/data/sc/prefect.png)
+
 
 # DataBase Schema
-
-
-
 ![image](https://github.com/shamlikTK/ClinicalDataSearcher/blob/main/data/sc/erd.png)
 
 
@@ -91,5 +103,7 @@ This system supports both operational workflows and analytical workloads by inte
 
 6. **Communication Layer**
    - All system components communicate via a **message bus** (e.g., Kafka), ensuring reliable and scalable data flow.
+
+
 
 
