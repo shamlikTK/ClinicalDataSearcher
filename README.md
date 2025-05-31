@@ -38,8 +38,8 @@ The ETL process consists of two main tasks:
 
 
 
+![image](https://github.com/shamlikTK/ClinicalDataSearcher/blob/main/data/sc/erd.png)
 
-![[erd.png]]
 
 ####  Schema Optimization Notes
 
@@ -56,7 +56,7 @@ The above design is mainly for demonstration purposes. If I were to build a prod
 
 
 
-![[tracking_system2 2.png]]
+![tracking_system2](https://github.com/shamlikTK/ClinicalDataSearcher/blob/main/data/sc/2.png)
 
 
 
