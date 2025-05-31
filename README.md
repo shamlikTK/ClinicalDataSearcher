@@ -14,8 +14,14 @@ This project is aimed to get data from https://clinicaltrials.gov/ and create tr
 git clone https://github.com/shamlikTK/ClinicalDataSearcher
 cd ClinicalDataSearcher
 docker compose up -d
+
 ```
 
+```
+Database access:  source .env && PGPASSWORD=$DB_PASSWORD psql -h $DB_HOST_LOCAL -p $DB_PORT -U $DB_USER -d $DB_NAME
+Prefect UI: http://127.0.0.1:4200
+
+```
 
 ### ETL Process
 
